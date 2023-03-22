@@ -1,9 +1,12 @@
 import numpy as np
 import cv2
 from model import create_model
+from tensorflow.keras.models import load_model
 
-model = create_model()
-model.load_weights("model.h5")
+# model = create_model()
+
+# model.load_weights("model (3).h5")
+model = load_model("new_model.h5")
 
 # prevents openCL usage and unnecessary logging messages
 cv2.ocl.setUseOpenCL(False)
